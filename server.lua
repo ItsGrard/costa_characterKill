@@ -80,38 +80,39 @@ function deleteIdentityFromDatabase(xPlayer)
     })
 
     if Config.FullCharDelete then
+        local identifier = xPLayer.getIdentifier()
             MySQL.Async.execute('DELETE FROM users WHERE identifier = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM owned_vehicles WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM owned_boats WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM owned_aircrafts WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })   
             MySQL.Async.execute('DELETE FROM owned_shops WHERE identifier = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM billing WHERE identifier = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM trucker_trucks WHERE user_id = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM trucker_users WHERE user_id = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM owned_properties WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
             MySQL.Async.execute('DELETE FROM addon_inventory_items WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })            
             MySQL.Async.execute('DELETE FROM datastore_data WHERE owner = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })                              
     end
 end
