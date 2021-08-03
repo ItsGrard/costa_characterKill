@@ -12,12 +12,12 @@ You **must** change the databases values in _server.cfg_ to your own databases, 
 
 ```            
 MySQL.Async.execute('DELETE FROM TABLENAME WHERE identifier = @ide',{
-                ['@ide'] = xPlayer.getIdentifier()
+                ['@ide'] = identifier
             })
 ```
 #### Commands
 - CK [NUMBER]: performs a CK on that player ID, this player must be online at the time. He'll be kicked out of the server with a message configurable in locale.
-- CKStatus: Shows the user whether it is set to completely erase the player or just it's identity.
+- CKStatus: Shows the user whether it is set to completely erase the player or just its identity.
 
 ### How to install it?
 
