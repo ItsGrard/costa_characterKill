@@ -80,7 +80,7 @@ function deleteIdentityFromDatabase(xPlayer)
     })
 
     if Config.FullCharDelete then
-        local identifier = xPLayer.getIdentifier()
+        local identifier = xPlayer.getIdentifier()
             MySQL.Async.execute('DELETE FROM users WHERE identifier = @ide',{
                 ['@ide'] = identifier
             })
