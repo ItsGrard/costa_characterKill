@@ -11,6 +11,7 @@ server_script {
 	'@mysql-async/lib/MySQL.lua',
 	'@es_extended/locale.lua',	
 	'locales/es.lua',
+	'locales/en.lua',
 	'config.lua',
 	'server.lua'
 }

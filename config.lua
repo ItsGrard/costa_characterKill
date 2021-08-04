@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Locale           = 'es'
+Config.Locale           = 'en'
 
 Config.admins = { -- use Rockstar license
 '576asfdahgshgvsdsfhsf7676sfsdfs',

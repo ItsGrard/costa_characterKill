@@ -14,7 +14,6 @@ end
 
 
 RegisterCommand('CK', function(source, args, user)
-    local xPlayers = ESX.GetPlayers()
     local target = ESX.GetPlayerFromId(args[1])
     local xPlayer = ESX.GetPlayerFromId(source)
     if isAdmin(xPlayer) then
