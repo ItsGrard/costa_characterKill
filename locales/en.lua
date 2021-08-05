@@ -1,4 +1,4 @@
-Locales['es'] = {
+Locales['en'] = {
   ['soft_delete'] = 'Identity deleted. You keep your vehicles and job.',
   ['hard_delete'] = 'Identity completely deleted.',
   ['deleted'] = "~r~User has been deleted.",
